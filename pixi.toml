@@ -1,0 +1,10 @@
+[workspace]
+authors = ["theweatherwill <theweatherwill@gmail.com>"]
+channels = ["conda-forge"]
+name = "AES408_Final_Donaldson"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
