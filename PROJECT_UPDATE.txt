@@ -12,7 +12,11 @@ NBR. This is because NDVI and NBR are on a -1 to 1 scale, and raw bits or pixels
 properly. I opened the bands I needed for initial testing, then calculated NDVI and NBR. Plotting these
 plots does not show a result I expected, as all my NDVI values appear as less than 0, which would
 indicate water, but the test image is rural Kansas. I also had issues with my green and blue bands
-before scaling, where they were identical to the red band or nonexistant. Going forward, I plan to
+before scaling, where they were identical to the red band or nonexistant. The code seems simple so far,
+but I went through a lot of testing for my bands, even attempted adding a threshold for the bands
+just to appear correctly. The data collection also took longer than anticipated.
+
+Going forward, I plan to
 prioritize figuring out my issue with NDVI and NBR, then begin testing methods of identifying hail swaths.
 I do not forsee any changes to my current proposal, though the hail swaths blend in more than I
 expected with the other land features like croplands! So it'll be fun. My goal is to at least get
