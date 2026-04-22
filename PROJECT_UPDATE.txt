@@ -1,0 +1,21 @@
+Began by figuring out which data source I wanted to use. First started with NASA Worldview,
+however, that only gave me a GeoTiff with Red, Green, Blue bands, which would not be useful in
+calculating NDVI or any other product that requires NIR or SWIR. Luckily, I found two events using
+EarthData from NASA, two pristine events. The pristine events are what I will be starting with, to make
+troubleshoot basic code simple. The data from EarthData contains SWIR and NIR, as well as other bands
+that might not be helpful, but they're included! NIR and SWIR specifically will be helpful for my
+hypothesis of NDVI or NBR, Normalized Burn Ratio, being useful.
+
+In VSCode, I created a function for opening each band's data, since I wanted to open at least RGB, NIR,
+and SWIR. I had the function open each tif file, reproject it, and then scale it for creating NDVI and
+NBR. This is because NDVI and NBR are on a -1 to 1 scale, and raw bits or pixels does not calculate
+properly. I opened the bands I needed for initial testing, then calculated NDVI and NBR. Plotting these
+plots does not show a result I expected, as all my NDVI values appear as less than 0, which would
+indicate water, but the test image is rural Kansas. I also had issues with my green and blue bands
+before scaling, where they were identical to the red band or nonexistant. Going forward, I plan to
+prioritize figuring out my issue with NDVI and NBR, then begin testing methods of identifying hail swaths.
+I do not forsee any changes to my current proposal, though the hail swaths blend in more than I
+expected with the other land features like croplands! So it'll be fun. My goal is to at least get
+my code to detect the pristine swaths, though I am aiming for the code to identify a less-pristine
+event as well. I will be using two events for each category of pristine, semi-pristine, and
+non-pristine.
